@@ -14,26 +14,47 @@ class App extends Component {
   constructor(props) {
     super(props )
     this.state = {
-      quotes: [],
-      colors: ["blue",  "red", "green"],
+      quotes: ["one", "two", "three"],
+      quoteIndex: 0,
+      colorIndex:  0,
+      colors: ["blue",  "red", "green", "orange"],
       buttonClicked: false,
       backgroundColor: 'black',
+      isToggleOn: true,
     }
-     
+     this.handleClick = this.handleClick.bind(this);
   }
 
 
   componentDidMount() {
-    console.log(true);
+    console.log(this.state.backgroundColor);
   }
-
+  
+  handleClick() {
+    let counter = this.state.colorIndex;
+    let color = this.state.colors[counter];
+    let quoteCounter = this.state.quoteIndex;
+    if (counter == 3) {
+      counter -= 4;
+        
+      }
+     console.log(this.state.colorIndex)
+     console.log(color)
+        this.setState(
+           {
+            colorIndex: counter + 1,
+            quoteIndex: quoteCounter + 1,
+           }
+          )
+     
+      }
   
 
   render() {
     return(
       <div className="vh-100 flex items-center justify-center bg-light-green">
         <Display>
-          <Quote />
+          <Quote quotes={this.state.quotes} quoteIndex={this.state.quoteIndex}/>
           <DisplayBottom>
             <ShareSectionColumn>
               <ShareSectionRow> 
@@ -43,7 +64,8 @@ class App extends Component {
             </ShareSectionColumn>
             <QuoteSectionColumn>
               <QuoteSectionRow>
-                <NewQuote />
+                <NewQuote onPress={this.handleClick} />
+                
               </QuoteSectionRow>
             </QuoteSectionColumn>
           </DisplayBottom>
