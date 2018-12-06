@@ -2,7 +2,7 @@ import React from 'react';
 
 const QuoteSectionColumn = (props) => {
 	return (
-		<div className=" h-100 w-50 flex flex-column justify-end">
+		<div className="h-auto w-100 flex flex-column">
 			{props.children}
 			
 		</div>

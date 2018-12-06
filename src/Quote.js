@@ -1,13 +1,13 @@
 import React from 'react';
 
 
-const Quote = ({quotes, quoteIndex}) => {
+const Quote = ({quotes, quoteIndex, author, authorIndex}) => {
 	return (
 		<div>
-			<div>
+			<div id="text">
 			 {quotes[quoteIndex]}
 			</div>
-			<p className='pa2'>-Author</p>
+			<p id="author" className='pa2'>{author[authorIndex]}</p>
 		</div>
 		)
 }

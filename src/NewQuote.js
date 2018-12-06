@@ -3,7 +3,9 @@ import React from 'react';
 
 const NewQuote = ({ onPress, }) => {
 	return (
-		<div className="flex h-50 w-15 white bg-light-green br2 ma2 pa1" 
+		<div 
+			id="new-quote"
+			className="flex h2 white bg-light-green br2 ma2 pa1 pointer items-center" 
 			onClick={onPress} >
 			NewQuote
 		</div>
