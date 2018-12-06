@@ -7,7 +7,7 @@ const Quote = ({quotes, quoteIndex, author, authorIndex}) => {
 			<div id="text">
 			 {quotes[quoteIndex]}
 			</div>
-			<p id="author" className='pa2'>{author[authorIndex]}</p>
+			<p id="author" className='pa2'>- {author[authorIndex]}</p>
 		</div>
 		)
 }
