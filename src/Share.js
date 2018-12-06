@@ -1,9 +1,10 @@
 import React from 'react';
+import twitter from './twitter-icon.png';
 
-const Share = () => {
+const Share = ({colors, colorIndex}) => {
 	return (
-			<div className="flex h-50 w-15 white  bg-light-green br2 ma2 pa1">
-				<p>Share</p>
+			<div style={{background: colors[colorIndex]}} className="flex h2 white br2 ma2 pa1 pointer items-center">
+			  <a id="tweet-quote" href="twitter.com/intent/tweet"><img style={{ height: 36, width: 36, }} src={twitter} alt="twitter-icon"/></a>
 			</div>
 		)
 }

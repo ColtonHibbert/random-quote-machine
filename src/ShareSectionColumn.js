@@ -2,7 +2,7 @@ import React from 'react';
 
 const ShareSectionColumn = (props) => {
 	return (
-		<div className="h-100 w-50 flex flex-column items-end">
+		<div className="h-auto w-100 flex">
 			{props.children}
 			
 		</div>
